@@ -1,0 +1,48 @@
+#nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: center;
+    align-items: center;
+    max-width: 800px; /* Increased to fit content - Adjust as needed */
+    margin: 0 auto; /* Center the navigation bar */
+    padding: 0;
+}
+
+#nav li {
+    margin: 0 20px; /* Increase margin for better spacing */
+    padding: 5px 10px; /* Adjusted for better spacing and clickability */
+    font-size: 16px; /* Increase font size for better visibility */
+}
+
+.md-typeset pre code {
+    padding: 16px; /* Increased padding for code blocks */
+}
+
+/* Adjust padding for the TOC items. The original 1000px seems to be a mistake. */
+.md-nav.md-right ul li {
+    padding: 5px 15px; /* Adjust padding for better spacing */
+}
+
+/* If the 'accent-color' was meant to be 'accent-color' for the TOC items, it should be applied differently, possibly like this: */
+.md-nav.md-right ul li::before {
+    content: ""; /* Adjust the color as needed, this example may not be suitable for all browsers */
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    margin-right: 0.5em;
+    background-color: #d52a2a;
+    border-radius: 50%;
+    margin-top: 1px; /* Center the dot vertically with the text */
+}
+
+@media only screen and (max-width: 600px) {
+    #nav ul {
+        max-width: 100%; /* Allow nav to fill the available space */
+    }
+
+    #nav li {
+        margin: 5px; /* Decrease margin for smaller screens */
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
